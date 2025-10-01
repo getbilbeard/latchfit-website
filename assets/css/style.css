@@ -44,6 +44,46 @@ a:hover{color:var(--coral);text-decoration:underline}
 .brand img{height:32px;transition:transform var(--transition)}
 .brand:hover img{transform:scale(1.08) rotate(-6deg)}
 
+.nav nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px;
+  border-radius:999px;
+  background:rgba(75,191,166,0.12);
+  border:1px solid rgba(75,191,166,0.26);
+  box-shadow:0 10px 24px rgba(75,191,166,0.18);
+  transition:background var(--transition),border-color var(--transition),box-shadow var(--transition);
+}
+.nav nav:hover{
+  background:rgba(75,191,166,0.18);
+  border-color:rgba(75,191,166,0.36);
+  box-shadow:0 16px 32px rgba(75,191,166,0.22);
+}
+.nav nav a{
+  color:var(--ink);
+  font-weight:600;
+  padding:8px 18px;
+  border-radius:999px;
+  transition:color var(--transition),background var(--transition),box-shadow var(--transition),transform var(--transition);
+}
+.nav nav a:hover{
+  background:#fff;
+  color:var(--sage);
+  box-shadow:0 6px 16px rgba(44,62,80,0.12);
+  transform:translateY(-1px);
+}
+.nav nav a:focus-visible{
+  outline:3px solid rgba(75,191,166,0.45);
+  outline-offset:2px;
+}
+.nav nav a[aria-current="page"],
+.nav nav a.is-active{
+  background:#fff;
+  color:var(--ink);
+  box-shadow:0 8px 20px rgba(44,62,80,0.14);
+}
+
 
 .site-footer{margin-top:48px;border-top:1px solid #eaeaea;background:rgba(255,255,255,0.97);box-shadow:0 -2px 12px rgba(44,62,80,0.03);}
 .site-footer .container{display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:0.98em}
@@ -165,12 +205,16 @@ a:hover{color:var(--coral);text-decoration:underline}
   .hero{grid-template-columns:1fr}
   .hero-art{height:300px}
   .features{grid-template-columns:repeat(2,1fr)}
+  .nav nav{flex-wrap:wrap;justify-content:flex-end}
 }
 
 @media (max-width:600px){
   .hero h1{font-size:2em}
   .features{grid-template-columns:1fr}
   .container{padding:12px;}
+  .nav{flex-direction:column;align-items:flex-start;gap:12px;}
+  .nav nav{width:100%;justify-content:flex-start}
+  .nav nav a{flex:1 1 auto;text-align:center;}
 }
 
 /* Subtle fade-in animation for main content */
