@@ -198,9 +198,18 @@ a:hover{color:var(--coral);text-decoration:underline}
 
 .features{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:22px;
-  margin:48px 0;
+  margin:64px 0 48px;
+}
+.features h2{
+  grid-column:1 / -1;
+  margin:0 0 12px;
+  font-size:1.9em;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+  text-align:left;
 }
 .feature{
   background:var(--card);
