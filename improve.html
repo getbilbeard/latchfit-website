@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help Us Improve • LatchFit</title>
+  <meta name="description" content="Share feedback and feature suggestions for the LatchFit app."/>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/favicon.png">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="LatchFit home"><img src="/assets/img/logoText.png" alt="LatchFit"></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/testimonies.html">Testimonies</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/improve.html" aria-current="page">Help Us Improve</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="feedback" aria-labelledby="improve-title">
+    <div class="feedback-copy">
+      <h1 id="improve-title">Help Us Improve LatchFit</h1>
+      <p>We’re building a calmer, smarter companion for your feeding journey—and your feedback keeps us on track. Tell us what’s working, what’s missing, and what would make LatchFit indispensable for you.</p>
+      <ul>
+        <li>Request new features or enhancements.</li>
+        <li>Flag bugs or confusing experiences.</li>
+        <li>Share stories about how you use LatchFit.</li>
+      </ul>
+      <p>Prefer email? Reach us anytime at <a href="mailto:support@latchfit.com">support@latchfit.com</a>.</p>
+    </div>
+    <form class="feedback-form" action="mailto:support@latchfit.com" method="post" enctype="text/plain">
+      <div class="field-group">
+        <label for="improve-name">Name (optional)</label>
+        <input id="improve-name" name="name" type="text" placeholder="Your name">
+      </div>
+      <div class="field-group">
+        <label for="improve-email">Email (optional)</label>
+        <input id="improve-email" name="email" type="email" placeholder="you@example.com">
+      </div>
+      <div class="field-group full">
+        <label for="improve-type">Feedback type</label>
+        <select id="improve-type" name="type">
+          <option value="feature">Feature request</option>
+          <option value="bug">Bug report</option>
+          <option value="usability">Usability insight</option>
+          <option value="story">Share your story</option>
+        </select>
+      </div>
+      <div class="field-group full">
+        <label for="improve-message">Your feedback</label>
+        <textarea id="improve-message" name="message" rows="6" placeholder="Tell us what you’d like to see or what could be better" required></textarea>
+      </div>
+      <div class="field-group full">
+        <label for="improve-device">Device details (optional)</label>
+        <input id="improve-device" name="device" type="text" placeholder="e.g., iPhone 15 Pro, iOS 17.0">
+      </div>
+      <button type="submit" class="cta">Share Feedback</button>
+    </form>
+  </section>
+
+  <section class="roadmap" aria-labelledby="improve-roadmap">
+    <div class="roadmap-head">
+      <h2 id="improve-roadmap">Curious what’s next?</h2>
+      <p>Peek at the LatchFit roadmap to see what’s already shipped and what’s in the queue.</p>
+      <a class="cta ghost" href="/roadmap.html">View the roadmap</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Zacquie. All rights reserved.</p>
+    <p>Questions? <a href="mailto:support@latchfit.com">support@latchfit.com</a></p>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
