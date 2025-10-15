@@ -356,6 +356,203 @@ a:hover{color:var(--coral);text-decoration:underline}
   .feedback{padding:26px;}
 }
 
+/* Breadcrumb navigation */
+.breadcrumb {
+  margin-bottom: 24px;
+  padding: 12px 0;
+  font-size: 0.95em;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--sage);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--coral);
+  text-decoration: underline;
+}
+
+/* Apps page styles */
+.apps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.app-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.app-card:hover {
+  box-shadow: 0 12px 32px rgba(44,62,80,0.13);
+  transform: translateY(-2px);
+}
+
+.app-card.coming-soon {
+  opacity: 0.8;
+  background: linear-gradient(135deg, var(--card) 0%, #f8f9fa 100%);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
+}
+
+.app-logo.placeholder {
+  background: linear-gradient(135deg, var(--sage), var(--coral));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+
+.app-info h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.app-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1em;
+}
+
+.app-details p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.app-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.app-links h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--sage);
+}
+
+.app-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-links li {
+  margin-bottom: 8px;
+}
+
+.app-links a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 0;
+  display: block;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition);
+}
+
+.app-links a:hover {
+  color: var(--sage);
+  border-bottom-color: var(--sage);
+  text-decoration: none;
+}
+
+.coming-soon-text {
+  color: var(--muted);
+  font-style: italic;
+  padding: 8px 0;
+  display: block;
+}
+
+.coming-soon-notice {
+  text-align: center;
+  padding: 48px 24px;
+  background: linear-gradient(135deg, var(--card) 0%, #f8f9fa 100%);
+  border-radius: var(--radius);
+  margin: 32px 0;
+}
+
+.coming-soon-notice h1 {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.coming-soon-notice p {
+  font-size: 1.1em;
+  color: var(--muted);
+}
+
+.coming-soon-notice strong {
+  color: var(--sage);
+  font-size: 1.2em;
+}
+
+.redirect-notice {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  margin: 32px 0;
+  box-shadow: var(--shadow);
+}
+
+.redirect-notice h1 {
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.redirect-notice p {
+  font-size: 1.1em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.redirect-notice a {
+  color: var(--sage);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .app-links {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .app-card {
+    padding: 24px;
+  }
+}
+
 /* Subtle fade-in animation for main content */
 main.container, .site-header, .site-footer {
   animation: fadein 0.7s cubic-bezier(.4,0,.2,1);
