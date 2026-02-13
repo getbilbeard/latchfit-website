@@ -206,22 +206,54 @@ a:hover{color:var(--coral);text-decoration:underline}
   margin:52px 0 16px;
   padding:26px 28px;
   border-radius:18px;
-  background:linear-gradient(120deg,rgba(75,191,166,0.16),rgba(255,138,138,0.14));
-  border:1px solid rgba(75,191,166,0.24);
-  box-shadow:0 10px 28px rgba(44,62,80,0.1);
+  background:linear-gradient(110deg,#167f7c,#24a48e);
+  border:1px solid rgba(22,127,124,0.65);
+  box-shadow:0 14px 32px rgba(22,127,124,0.28);
 }
 .milestone h2{
   margin:0 0 8px;
   font-size:1.7em;
   font-weight:800;
   letter-spacing:-0.01em;
-  color:var(--ink);
+  color:#ffffff;
 }
 .milestone p{
   margin:0;
-  color:var(--ink);
+  color:rgba(255,255,255,0.96);
   max-width:720px;
   line-height:1.5;
+}
+
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(26,34,51,0.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  z-index:1000;
+}
+.popup-card{
+  width:min(420px,100%);
+  background:#ffffff;
+  border-radius:18px;
+  padding:28px 24px;
+  box-shadow:0 24px 50px rgba(26,34,51,0.3);
+  text-align:center;
+}
+.popup-card h2{
+  margin:0 0 10px;
+  font-size:1.6em;
+  color:var(--ink);
+}
+.popup-card p{
+  margin:0 0 20px;
+  color:var(--muted);
+  line-height:1.5;
+}
+.popup-close{
+  min-width:120px;
 }
 .features h2{
   grid-column:1 / -1;
