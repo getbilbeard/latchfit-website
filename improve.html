@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Help Us Improve • LatchFit</title>
   <meta name="description" content="Share feedback and feature suggestions for the LatchFit app."/>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260213">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260213b">
   <link rel="icon" href="/assets/img/favicon.png">
 </head>
 <body>
@@ -35,33 +35,48 @@
       </ul>
       <p>Prefer email? Reach us anytime at <a href="mailto:support@latchfit.com">support@latchfit.com</a>.</p>
     </div>
-    <form class="feedback-form" action="mailto:support@latchfit.com" method="post" enctype="text/plain">
-      <div class="field-group">
-        <label for="improve-name">Name (optional)</label>
-        <input id="improve-name" name="name" type="text" placeholder="Your name">
-      </div>
+    <form
+      class="feedback-form js-feedback-form"
+      data-feedback-endpoint="https://formsubmit.co/ajax/support@latchfit.com"
+      data-feedback-source="help_us_improve"
+      novalidate
+    >
       <div class="field-group">
         <label for="improve-email">Email (optional)</label>
-        <input id="improve-email" name="email" type="email" placeholder="you@example.com">
+        <input id="improve-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
       </div>
-      <div class="field-group full">
-        <label for="improve-type">Feedback type</label>
-        <select id="improve-type" name="type">
-          <option value="feature">Feature request</option>
-          <option value="bug">Bug report</option>
-          <option value="usability">Usability insight</option>
-          <option value="story">Share your story</option>
+      <div class="field-group">
+        <label for="improve-category">Category (optional)</label>
+        <select id="improve-category" name="category">
+          <option value="">Select a category</option>
+          <option value="feature_request">Feature request</option>
+          <option value="bug_report">Bug report</option>
+          <option value="usability">Usability</option>
+          <option value="general_feedback">General feedback</option>
         </select>
       </div>
+      <fieldset class="field-group full feedback-rating">
+        <legend>Rating (optional)</legend>
+        <div class="rating-options" role="radiogroup" aria-label="Rate your experience from 1 to 5">
+          <input type="radio" id="improve-rating-1" name="rating" value="1">
+          <label for="improve-rating-1">1</label>
+          <input type="radio" id="improve-rating-2" name="rating" value="2">
+          <label for="improve-rating-2">2</label>
+          <input type="radio" id="improve-rating-3" name="rating" value="3">
+          <label for="improve-rating-3">3</label>
+          <input type="radio" id="improve-rating-4" name="rating" value="4">
+          <label for="improve-rating-4">4</label>
+          <input type="radio" id="improve-rating-5" name="rating" value="5">
+          <label for="improve-rating-5">5</label>
+        </div>
+      </fieldset>
       <div class="field-group full">
-        <label for="improve-message">Your feedback</label>
+        <label for="improve-message">Message</label>
         <textarea id="improve-message" name="message" rows="6" placeholder="Tell us what you’d like to see or what could be better" required></textarea>
       </div>
-      <div class="field-group full">
-        <label for="improve-device">Device details (optional)</label>
-        <input id="improve-device" name="device" type="text" placeholder="e.g., iPhone 15 Pro, iOS 17.0">
-      </div>
-      <button type="submit" class="cta">Share Feedback</button>
+      <p class="privacy-note">Email is optional and only used if you want a reply.</p>
+      <p class="form-status" data-feedback-status aria-live="polite"></p>
+      <button type="submit" class="cta" data-submit-label>Send Feedback</button>
     </form>
   </section>
 
@@ -80,6 +95,6 @@
     <p>Questions? <a href="mailto:support@latchfit.com">support@latchfit.com</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js?v=20260213"></script>
+<script src="/assets/js/main.js?v=20260213b"></script>
 </body>
 </html>
