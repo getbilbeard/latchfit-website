@@ -387,6 +387,30 @@ a:hover{color:var(--coral);text-decoration:underline}
 .feedback-form textarea{resize:vertical;min-height:140px;}
 .feedback-form .cta{grid-column:1 / -1;justify-self:flex-start;padding:12px 26px;}
 
+.contact-card{
+  background:var(--card);
+  margin:40px 0 0;
+  padding:34px 30px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.contact-card h1{
+  margin:0 0 10px;
+}
+.contact-card p{
+  margin:0;
+  color:var(--muted);
+}
+.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:18px 0 14px;
+}
+.contact-note{
+  font-size:0.98em;
+}
+
 
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
