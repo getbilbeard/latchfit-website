@@ -222,6 +222,37 @@ a:hover{color:var(--coral);text-decoration:underline}
   gap:22px;
   margin:64px 0 48px;
 }
+.product-alert{
+  margin:48px 0 18px;
+  padding:28px 30px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(255,247,234,0.98),rgba(255,255,255,0.96));
+  border:1px solid rgba(235,141,104,0.28);
+  box-shadow:0 14px 34px rgba(44,62,80,0.08);
+}
+.product-alert-copy{
+  max-width:760px;
+}
+.product-alert .eyebrow{
+  margin:0 0 10px;
+  color:var(--coral);
+  font-size:0.84em;
+  font-weight:800;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+.product-alert h2{
+  margin:0 0 10px;
+  font-size:1.9em;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+.product-alert p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+}
 .milestone{
   margin:52px 0 16px;
   padding:26px 28px;
